@@ -39,7 +39,7 @@ export const departmentsRelations = relations(departments, ({ many }) => ({
   subjects: many(subjects),
 }));
 export const subjectsRelations = relations(subjects, ({ one }) => ({
-  departments: one(departments, {
+  department: one(departments, {
     fields: [subjects.departmentId],
     references: [departments.id],
   }),
